@@ -1,0 +1,101 @@
+:root {
+    --primary-color: #ff4d4d;
+    --secondary-color: #ffffff;
+    --background-color: #ffe6e6;
+    --button-hover-color: #ff1a1a;
+    --text-color: #333333;
+    --font-family: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+}
+
+.container {
+    text-align: center;
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+#valentineQuestion {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+#imageDisplay {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+#responseButtons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#responseButtons button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#yesButton {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+#noButton {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+#responseButtons button:hover {
+    transform: scale(1.1);
+}
+
+#yesButton:hover {
+    background-color: var(--button-hover-color);
+}
+
+#noButton:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+#imageDisplay:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
